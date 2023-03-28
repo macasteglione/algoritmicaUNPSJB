@@ -23,9 +23,8 @@ public class punto20 {
             }
             System.out.print("Felicidades! Adivinaste el numero con " + cont
             + " intentos!\nDeseas jugar de nuevo? Para salir use 0. Para continuar usa cualquier tecla: ");
-            input.nextLine();
-            String menu = input.next();
-            if (menu == "0")
+            String menu = input.nextLine();
+            if (menu.equals("0"))
                 run = false;
         }
         input.close();
