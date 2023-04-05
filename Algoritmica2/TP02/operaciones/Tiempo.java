@@ -45,6 +45,45 @@ public class Tiempo {
         this.segundos = segundos;
     }
 
+    public Tiempo incrementarSegundo() {
+        int segundos = this.segundos;
+        int minutos = this.minutos;
+        int horas = this.horas;
+        segundos++;
+        if (segundos == 60) {
+            segundos = 0;
+            minutos++;
+            if (minutos == 60) {
+                minutos = 0;
+                horas++;
+                if (horas == 24)
+                    horas = 0;
+            }
+        }
+        return new Tiempo(horas, minutos, segundos);
+    }
+
+    public Tiempo incrementarMinuto() {
+        int minutos = this.minutos;
+        int horas = this.horas;
+        minutos++;
+        if (minutos == 60) {
+            minutos = 0;
+            horas++;
+            if (horas == 24)
+                horas = 0;
+        }
+        return new Tiempo(horas, minutos, this.segundos);
+    }
+
+    public Tiempo incrementarHora() {
+        int horas = this.horas;
+        horas++;
+        if (horas == 24)
+            horas = 0;
+        return new Tiempo(horas, this.minutos, this.segundos);
+    }
+
     public String toString() {
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
