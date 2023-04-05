@@ -27,16 +27,16 @@ public class Complejo {
         return parteReal;
     }
 
-    public float setParteReal(float parteReal) {
-        return this.parteReal = parteReal;
+    public void setParteReal(float parteReal) {
+        this.parteReal = parteReal;
     }
 
     public float getParteImaginaria() {
         return parteImaginaria;
     }
 
-    public float setParteImaginaria(float parteImaginaria) {
-        return this.parteImaginaria = parteImaginaria;
+    public void setParteImaginaria(float parteImaginaria) {
+        this.parteImaginaria = parteImaginaria;
     }
 
     public Complejo sumar(Complejo punto) {

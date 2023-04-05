@@ -1,5 +1,3 @@
-package Algoritmica2.TP02;
-
 import operaciones.Complejo;
 
 public class punto01 {
