@@ -1,5 +1,13 @@
 package operaciones;
 
+import java.util.concurrent.TimeUnit;
+import java.time.LocalDate;
+import java.time.format.TextStyle;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class Fecha {
     private int ano, mes, dia;
 
@@ -77,25 +85,30 @@ public class Fecha {
         return new Fecha(ano, mes, dia);
     }
 
-    public String mayorMenorOIgual(Fecha fecha1, Fecha fecha2) {
+    public static void mayorMenorOIgual(Fecha fecha1, Fecha fecha2) {
         int comparacion = fecha1.toString().compareTo(fecha2.toString());
         if (comparacion < 0)
-            return fecha2 + " es mayor que " + fecha1;
+            System.out.println(fecha2 + " es mayor que " + fecha1);
         else if (comparacion > 0)
-            return fecha1 + " es mayor que " + fecha2;
+            System.out.println(fecha1 + " es mayor que " + fecha2);
         else
-            return fecha1 + " y " + fecha2 + " son iguales";
+            System.out.println(fecha1 + " y " + fecha2 + " son iguales");
     }
 
-    public String diferenciaDeFechas(Fecha fecha1, Fecha fecha2) {
-        int diferencia = Integer.compare(fecha1.getAno(), fecha2.getAno());
-        if (diferencia != 0)
-            return "Hay " + Math.abs(diferencia) + " años de diferencia";
-        diferencia = Integer.compare(fecha1.getMes(), fecha2.getMes());
-        if (diferencia != 0)
-            return "Hay " + Math.abs(diferencia) + " meses de diferencia";
-        diferencia = Integer.compare(fecha1.getDia(), fecha2.getDia());
-        return "Hay " + Math.abs(diferencia) + " dias de diferencia";
+    public static void diferenciaDeFechas(Fecha fecha1, Fecha fecha2) throws ParseException {
+        SimpleDateFormat fechaf = new SimpleDateFormat("yyyy/mm/dd");
+        Date f1 = fechaf.parse(fecha1.toString());
+        Date f2 = fechaf.parse(fecha2.toString());
+        long tiempoTranscurrido = f2.getTime() - f1.getTime();
+        TimeUnit unidad = TimeUnit.DAYS;
+        long dias = unidad.convert(tiempoTranscurrido, TimeUnit.MILLISECONDS);
+        System.out.println("Hay una diferencia de " + Math.abs(dias) + " dia(s)");
+    }
+
+    public static void diaDeSemana(Fecha fecha) {
+        LocalDate fechaObtenida = LocalDate.of(fecha.getAno(), fecha.getMes(), fecha.getDia());
+        String diaSemana = fechaObtenida.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
+        System.out.println("El dia de la semana para " + fecha.toString() + " es " + diaSemana);
     }
 
     private int diasDelMes(int ano, int mes) {
