@@ -15,20 +15,19 @@ public class punto10 {
         listaEmpleados.add(new EmpleadoPorHora("Julio", "3443265", 100, 10000));
 
         for (Empleado empleado : listaEmpleados) {
-            System.out.println("Nombre: " + empleado.getNombre() + " Salario: $");
-
+            System.out.print("Nombre: " + empleado.getNombre() + " Salario: $");
             if (empleado instanceof EmpleadoAsalariado) {
                 EmpleadoAsalariado empleadoAsalariado = (EmpleadoAsalariado) empleado;
                 System.out.println(empleadoAsalariado.getSalarioMensual());
-            }
-            else if (empleado instanceof EmpleadoBaseMasComision) {
+            } else if (empleado instanceof EmpleadoBaseMasComision) {
                 EmpleadoBaseMasComision empleadoBaseMasComision = (EmpleadoBaseMasComision) empleado;
-                System.out.println((empleadoBaseMasComision.getVentasBrutas() * empleadoBaseMasComision.getPorcentajeComision() + empleadoBaseMasComision.getSalarioBase()) * 1.1);
-            }
-            else if (empleado instanceof EmpleadoPorComision) {
+                System.out.println(empleadoBaseMasComision.getVentasBrutas() * empleadoBaseMasComision.getPorcentajeComision() + empleadoBaseMasComision.getSalarioBase() * 1.1);
+            } else if (empleado instanceof EmpleadoPorComision) {
                 EmpleadoPorComision empleadoPorComision = (EmpleadoPorComision) empleado;
                 System.out.println(empleadoPorComision.getVentasBrutas() * empleadoPorComision.getPorcentajeComision());
-
+            } else if (empleado instanceof EmpleadoPorHora) {
+                EmpleadoPorHora empleadoPorHora = (EmpleadoPorHora) empleado;
+                System.out.println(empleadoPorHora.getValorHora() * empleadoPorHora.getHorasTrabajadas());
             }
         }
     }

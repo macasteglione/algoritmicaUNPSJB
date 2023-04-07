@@ -1,6 +1,6 @@
 package operaciones;
 
-public class Empleado {
+public class Empleado implements PorPagar{
     private String nombre, numeroDocumento;
 
     public Empleado(String nombre, String numeroDocumento) {
@@ -22,5 +22,10 @@ public class Empleado {
 
     public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
+    }
+
+    @Override
+    public double obtenerPago() {
+        return 0;
     }
 }
