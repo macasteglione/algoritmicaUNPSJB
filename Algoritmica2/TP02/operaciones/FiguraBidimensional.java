@@ -1,28 +1,28 @@
 package operaciones;
 
-public class FiguraBidimensional extends Figura {
+abstract class FiguraBidimensional extends Figura {
 
-    public FiguraBidimensional(double x, double y, double z) {
+    protected FiguraBidimensional(double x, double y) {
         super(x, y, 0.0);
     }
 
-    public double diametroCirculo() {
+    protected double diametroCirculo() {
         return super.diametroCirculo();
     }
 
-    public double perimetroCirculo() {
+    protected String perimetroCirculo() {
         return super.perimetroCirculo();
     }
-    
-    public double perimetroRectangulo() {
+
+    protected double perimetroRectangulo() {
         return super.perimetroRectangulo();
     }
-    
-    public double areaCirculo() {
+
+    protected String areaCirculo() {
         return super.areaCirculo();
     }
 
-    public double areaRectangulo() {
+    protected double areaRectangulo() {
         return super.areaRectangulo();
     }
 

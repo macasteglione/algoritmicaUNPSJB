@@ -13,7 +13,7 @@ public class PrimaRectangular extends FiguraTridimensional {
         setProfundidad(profundidad);
     }
 
-    public double areaPrisma() {
+    public double area() {
         return areaPrismaRectangular();
     }
 

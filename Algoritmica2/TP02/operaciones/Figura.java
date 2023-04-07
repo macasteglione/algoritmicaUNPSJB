@@ -1,102 +1,102 @@
 package operaciones;
 
-public class Figura {
+abstract class Figura {
     private double radio, base, altura, profundidad;
     private Punto puntoOrigen;
 
     // Constructor
-    public Figura(double x, double y, double z) {
+    protected Figura(double x, double y, double z) {
         puntoOrigen = new Punto(x, y, z);
     }
 
     // Cuentitas
-    public double diametroCirculo() {
+    protected double diametroCirculo() {
         return 2 * radio;
     }
 
-    public double areaCirculo() {
-        return Math.PI * Math.pow(radio, 2);
+    protected String areaCirculo() {
+        return String.format("%.2f", Math.PI * Math.pow(radio, 2));
     }
 
-    public double areaRectangulo() {
+    protected double areaRectangulo() {
         return base * altura;
     }
 
-    public double areaEsfera() {
-        return 4 * Math.PI * Math.pow(radio, 2);
+    protected String areaEsfera() {
+        return String.format("%.2f", 4 * Math.PI * Math.pow(radio, 2));
     }
 
-    public double areaPrismaRectangular() {
+    protected double areaPrismaRectangular() {
         return 2 * (base * profundidad + areaRectangulo() + profundidad * altura);
     }
 
-    public double perimetroCirculo() {
-        return diametroCirculo() * Math.PI;
+    protected String perimetroCirculo() {
+        return String.format("%.2f", diametroCirculo() * Math.PI);
     }
 
-    public double perimetroRectangulo() {
+    protected double perimetroRectangulo() {
         return 2 * (base + altura);
     }
 
-    public double perimetroEsfera() {
+    protected String perimetroEsfera() {
         return perimetroCirculo();
     }
 
-    public double perimetroPrismaRectangular() {
+    protected double perimetroPrismaRectangular() {
         return 4 * (base + altura + profundidad);
     }
 
-    public double volumenEsfera() {
-        return (4 / 3) * Math.PI * Math.pow(radio, 3);
+    protected String volumenEsfera() {
+        return String.format("%.2f", (4 / 3) * Math.PI * Math.pow(radio, 3));
     }
 
-    public double volumenPrismaRectangular() {
+    protected double volumenPrismaRectangular() {
         return altura * base * profundidad;
     }
 
     // Getters y Setters
-    public double getRadio() {
+    protected double getRadio() {
         return radio;
     }
 
-    public void setRadio(double radio) {
+    protected void setRadio(double radio) {
         if (radio > 0)
             this.radio = radio;
     }
 
-    public double getBase() {
+    protected double getBase() {
         return base;
     }
 
-    public void setBase(double base) {
+    protected void setBase(double base) {
         if (base > 0)
             this.base = base;
     }
 
-    public double getAltura() {
+    protected double getAltura() {
         return altura;
     }
 
-    public void setAltura(double altura) {
+    protected void setAltura(double altura) {
         if (altura > 0)
             this.altura = altura;
     }
 
-    public double getProfundidad() {
+    protected double getProfundidad() {
         return profundidad;
     }
 
-    public void setProfundidad(double profundidad) {
+    protected void setProfundidad(double profundidad) {
         if (profundidad > 0)
             this.profundidad = profundidad;
     }
 
     // toStrings
-    public String toString2d() {
+    protected String toString2d() {
         return "(" + puntoOrigen.getX() + ", " + puntoOrigen.getY() + ")";
     }
 
-    public String toString3d() {
+    protected String toString3d() {
         return puntoOrigen.toString();
     }
 }

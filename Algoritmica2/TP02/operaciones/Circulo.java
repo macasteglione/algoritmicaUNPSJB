@@ -3,11 +3,11 @@ package operaciones;
 public class Circulo extends FiguraBidimensional {
 
     public Circulo() {
-        super(0, 0, 0);
+        super(0, 0);
     }
 
     public Circulo(double x, double y, double radio) {
-        super(x, y, 0);
+        super(x, y);
         setRadio(radio);
     }
 
@@ -15,11 +15,11 @@ public class Circulo extends FiguraBidimensional {
         return diametroCirculo();
     }
 
-    public double perimetro() {
+    public String perimetro() {
         return perimetroCirculo();
     }
 
-    public double area() {
+    public String area() {
         return areaCirculo();
     }
 
@@ -33,6 +33,6 @@ public class Circulo extends FiguraBidimensional {
 
     @Override
     public String toString() {
-        return "Centro = " + super.toString() + "\nRadio = " + getRadio();
+        return "Centro del circulo = " + super.toString() + "\nRadio = " + getRadio();
     }
 }

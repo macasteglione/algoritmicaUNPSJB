@@ -1,32 +1,32 @@
 package operaciones;
 
-public class FiguraTridimensional extends Figura{
+abstract class FiguraTridimensional extends Figura {
 
-    public FiguraTridimensional(double x, double y, double z) {
+    protected FiguraTridimensional(double x, double y, double z) {
         super(x, y, z);
     }
 
-    public double areaEsfera() {
+    protected String areaEsfera() {
         return super.areaEsfera();
     }
 
-    public double areaPrismaRectangular() {
+    protected double areaPrismaRectangular() {
         return super.areaPrismaRectangular();
     }
 
-    public double perimetroEsfera() {
+    protected String perimetroEsfera() {
         return super.perimetroEsfera();
     }
 
-    public double perimetroPrismaRectangular() {
+    protected double perimetroPrismaRectangular() {
         return super.perimetroPrismaRectangular();
     }
 
-    public double volumenEsfera() {
+    protected String volumenEsfera() {
         return super.volumenEsfera();
     }
 
-    public double volumenPrismaRectangular() {
+    protected double volumenPrismaRectangular() {
         return super.volumenPrismaRectangular();
     }
 

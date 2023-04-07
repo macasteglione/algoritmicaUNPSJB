@@ -11,15 +11,15 @@ public class Esfera extends FiguraTridimensional {
         setRadio(radio);
     }
 
-    public double area() {
+    public String area() {
         return areaEsfera();
     }
 
-    public double perimetro() {
+    public String perimetro() {
         return perimetroEsfera();
     }
 
-    public double volumen() {
+    public String volumen() {
         return volumenEsfera();
     }
 
@@ -33,6 +33,6 @@ public class Esfera extends FiguraTridimensional {
 
     @Override
     public String toString() {
-        return "Centro = " + super.toString() + "\nRadio = " + getRadio();
+        return "Centro de la esfera = " + super.toString() + "\nRadio = " + getRadio();
     }
 }
