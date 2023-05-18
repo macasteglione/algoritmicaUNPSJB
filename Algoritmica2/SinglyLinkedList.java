@@ -190,4 +190,23 @@ public class SinglyLinkedList<E> {
 			size--;
 		}
 	}
+
+	/* Inserta el elemento e en la posicion n de la lista */
+	public void addPos(E e, int n) throws IndexOutOfBoundsException {
+		if (n > size || n < 0)
+			throw new IndexOutOfBoundsException("Fuera de rango");
+		if (n == 0)
+			addFirst(e);
+		else if (n == size )
+			addLast(e);
+		else {
+			Node<E> current = head;
+			Node<E> nuevo = new Node<E>(e, null);
+			for (int i = 0; i < n; i++)
+				current = current.next;
+			nuevo.next = current.next;
+			current.next = nuevo;
+			size++;
+		}
+	}
 }

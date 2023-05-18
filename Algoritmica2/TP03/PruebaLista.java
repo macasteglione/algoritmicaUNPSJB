@@ -1,6 +1,6 @@
 import logica.Lista;
 
-public class punto01 {
+public class PruebaLista {
     public static void main(String[] args) {
         Lista<Integer> l1 = new Lista<>(5);
         l1.add(1);
