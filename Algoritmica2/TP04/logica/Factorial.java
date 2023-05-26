@@ -1,4 +1,5 @@
 package logica;
+import java.util.Arrays;
 
 public class Factorial {
 
@@ -27,6 +28,7 @@ public class Factorial {
                 j--;
             }
         }
+        System.out.println(this.toString());
         if (low < j)
             quicksort(low, j);
         if (i < high)
@@ -37,5 +39,10 @@ public class Factorial {
         int temp = numbers[i];
         numbers[i] = numbers[j];
         numbers[j] = temp;
+    }
+
+    @Override
+    public String toString() {
+        return "Quicksort [numbers=" + Arrays.toString(numbers) + "]";
     }
 }
