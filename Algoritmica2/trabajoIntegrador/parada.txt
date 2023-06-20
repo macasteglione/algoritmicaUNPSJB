@@ -1,0 +1,64 @@
+#id de la parada;dirección
+P1;1 De Marzo, 405
+P2;25 De Mayo, 299
+P3;25 De Mayo, 693
+P4;28 De Julio, 200
+P5;28 De Julio, 311
+P6;8 De Marzo, 385
+P7;Abraham Mathews, 2525
+P8;Agustín Pujol, 374
+P9;Alto Río Senguer, 1311
+P10;Avenida Domec García Norte, 239
+P11;Avenida Juan Muzzio, 258
+P12;Avenida Juan Muzzio, 482
+P13;Avenida Julio Argentino Roca, 1567
+P14;Avenida Julio Argentino Roca, 2251
+P15;Bartolomé Mitre, 401
+P16;Bartolomé Mitre, 610
+P17;Belgrano, 314
+P18;Bouchard, 1285
+P19;Bouchard, 880
+P20;Bv. Almirante Brown, 2925
+P21;Bv. Almirante Brown, 3053
+P22;Comodoro Martín Rivadavia, 602
+P23;Comodoro Martín Rivadavia, 750
+P24;Dorrego, 416
+P25;Dorrego, 669
+P26;Dorrego, 700
+P27;El Jariyal, 1725
+P28;España, 1431
+P29;España, 1450
+P30;España, 1660
+P31;España, 485
+P32;España, 928
+P33;Esquel, 1352
+P34;Fournier, 1090
+P35;Francisco Luis Albarracín, 2250
+P36;General Mosconi, 100
+P37;Gobernador Alejandro Maiz, 315
+P38;Hipólito Yrigoyen, 802
+P39;Juan B. Justo, 1172
+P40;Juan Bautista Alberdi, 1240
+P41;Juan Jose Meangolarra Y Moreno, 1005
+P42;Julián Murga, 950
+P44;La Pampa, 698
+P45;Los Alamos, 3900
+P46;Luis Urtazun, 624
+P47;Magallanes, 883
+P48;Manuel Alsua, 1086
+P49;Manuel Carrera, 1534
+P50;Marcos A. Zar, 1998
+P51;Marcos A. Zar, 461
+P52;Marcos A. Zar, 691
+P53;Mariano Moreno, 193
+P54;Pasaje 22 De Abril, 167
+P55;Pedro Derbes, 660
+P56;Pedro Derbes, 816
+P57;Rivadavia, 2476
+P58;Rivadavia, 2496
+P59;Roberto Gómez, 1017
+P60;Roberto Gómez, 550
+P61;Ruperto Gimenez, 678
+P62;Ruta Provincial 1
+P63;San Juan, 896
+P64;Villegas, 700
