@@ -1,71 +1,102 @@
 package colectivo.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que representa un colectivo.
+ * 
+ * @author Matias Casteglione
+ */
 public class Colectivo {
     private String id;
-    private Linea linea;
-    private int cantidadAsientos;
+    private int asientos;
     private int totalPasajeros;
     private List<Pasajero> pasajeros;
-    private Parada paradaActual;
-    private int combustible;
+    private Linea linea;
 
-    public Colectivo(String id, Linea linea, int cantidadAsientos, int totalPasajeros) {
+    /**
+     * Constructor de la clase Colectivo.
+     * 
+     * @param id              el ID del colectivo
+     * @param asientos        el numero total de asientos del colectivo
+     * @param totalPasajeros  la capacidad maxima de pasajeros del colectivo
+     * @param pasajeros       la lista de pasajeros actualmente en el colectivo
+     * @param linea           la linea a la que pertenece el colectivo
+     */
+    public Colectivo(String id, int asientos, int totalPasajeros, List<Pasajero> pasajeros, Linea linea) {
         this.id = id;
-        this.linea = linea;
-        this.cantidadAsientos = cantidadAsientos;
+        this.asientos = asientos;
         this.totalPasajeros = totalPasajeros;
-        pasajeros = new ArrayList<>();
+        this.pasajeros = pasajeros;
+        this.linea = linea;
     }
 
+    /**
+     * Obtiene el ID del colectivo.
+     * 
+     * @return el ID del colectivo
+     */
     public String getId() {
         return id;
     }
 
-    public Linea getLinea() {
-        return linea;
-    }
-
-    public int getCantidadAsientos() {
-        return cantidadAsientos;
-    }
-
+    /**
+     * Obtiene la capacidad maxima de pasajeros del colectivo.
+     * 
+     * @return la capacidad maxima de pasajeros del colectivo
+     */
     public int getTotalPasajeros() {
         return totalPasajeros;
     }
 
+    /**
+     * Obtiene la lista de pasajeros actualmente en el colectivo.
+     * 
+     * @return la lista de pasajeros actualmente en el colectivo
+     */
     public List<Pasajero> getPasajeros() {
         return pasajeros;
     }
 
-    public void agregarPasajero(Pasajero pasajero) {
-        pasajeros.add(pasajero);
+    /**
+     * Establece la lista de pasajeros del colectivo.
+     * 
+     * @param pasajeros la lista de pasajeros a establecer
+     */
+    public void setPasajeros(List<Pasajero> pasajeros) {
+        this.pasajeros = pasajeros;
     }
 
-    public void eliminarPasajero(Pasajero pasajero) {
-        pasajeros.remove(pasajero);
+    /**
+     * Obtiene la linea a la que pertenece el colectivo.
+     * 
+     * @return la linea a la que pertenece el colectivo
+     */
+    public Linea getLinea() {
+        return linea;
+    }
+
+    /**
+     * Establece la linea a la que pertenece el colectivo.
+     * 
+     * @param linea la linea a establecer
+     */
+    public void setLinea(Linea linea) {
+        this.linea = linea;
+    }
+
+    /**
+     * Obtiene la cantidad de asientos disponibles en el colectivo.
+     * 
+     * @return la cantidad de asientos disponibles en el colectivo
+     */
+    public int getAsientosDisponibles() {
+        return asientos - pasajeros.size();
     }
 
     @Override
     public String toString() {
-        return "[id=" + id + ", linea=" + linea.getId() + "]";
-    }
-
-    public void setParadaActual(Parada siguienteParada) {
-        this.paradaActual = siguienteParada;
-    }
-
-    public Parada getParadaActual() {
-        return paradaActual;
-    }
-
-    public int getCombustible() {
-        return combustible;
-    }
-
-    public void setCombustible(int combustible) {
-        this.combustible = combustible;
+        return "Colectivo [id: " + id + "\nAsientos: " + asientos + "\ntotalPasajeros: " + totalPasajeros
+                + "\npasajeros: " + pasajeros.size() + ", Linea: " + linea + "]\n";
     }
 }

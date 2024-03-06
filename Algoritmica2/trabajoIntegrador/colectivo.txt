@@ -1,4 +1,3 @@
-#id del colectivo;línea a la que pertenece;cantidad de asientos;total de pasajeros
 C1;L1;30;60
 C2;L1;30;60
 C3;L2;30;60
